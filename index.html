@@ -1,7 +1,10 @@
+
 <!DOCTYPE html>
-<html lang="pt-MZ">
+<html lang="pt">
 <head>
   <meta charset="UTF-8" />
+  <meta name="google-site-verification" content="kNFaC1esvN37ijDznnYQHg079Xm7JpNRlJf2P3qwntw" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SURTEC - Soluções Digitais</title>
   <style>
@@ -9,12 +12,12 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f0f2f5;
-      color: #333;
+      background: #0d1117;
+      color: #c9d1d9;
     }
     header {
-      background: #004080;
-      color: white;
+      background: #161b22;
+      color: #58a6ff;
       padding: 20px;
       display: flex;
       align-items: center;
@@ -24,7 +27,7 @@
       text-align: center;
     }
     nav {
-      background: #0073e6;
+      background: #21262d;
       display: flex;
       justify-content: center;
       gap: 20px;
@@ -32,7 +35,7 @@
       flex-wrap: wrap;
     }
     nav a {
-      color: white;
+      color: #58a6ff;
       text-decoration: none;
       font-weight: bold;
       padding: 8px 12px;
@@ -40,33 +43,33 @@
       transition: background 0.3s ease;
     }
     nav a:hover {
-      background: #004080;
+      background: #30363d;
     }
     main {
       padding: 20px;
       max-width: 900px;
       margin: 20px auto;
-      background: white;
+      background: #161b22;
       border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      box-shadow: 0 0 8px rgba(0,0,0,0.3);
     }
     section {
       margin-bottom: 40px;
     }
     h1, h2 {
-      color: #004080;
+      color: #58a6ff;
       margin: 0 0 10px 0;
     }
     footer {
-      background: #004080;
-      color: white;
+      background: #21262d;
+      color: #8b949e;
       text-align: center;
       padding: 15px;
       margin-top: 40px;
     }
     .btn-whatsapp {
       display: inline-block;
-      background: #ff6600;
+      background: #238636;
       color: white;
       padding: 10px 15px;
       border-radius: 5px;
@@ -75,38 +78,52 @@
       transition: background 0.3s ease;
     }
     .btn-whatsapp:hover {
-      background: #cc5200;
+      background: #2ea043;
+    }
+    #language-toggle {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: #21262d;
+      color: #58a6ff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      z-index: 999;
     }
   </style>
-  <meta name="google-site-verification" content="ojwQhPJsBAAfyhdAbC7RuQx5EqCwurv9MnjattYcht0" />
 </head>
 <body>
+
+<button id="language-toggle">EN</button>
 
 <header>
   <img src="logo-surtec.png" alt="Logotipo SURTEC" style="height: 70px; width: auto; margin-right: 15px;" />
   <div class="header-text">
-    <h1>SURTEC</h1>
-    <p>Soluções digitais para o seu negócio</p>
+    <h1 id="title">SURTEC</h1>
+    <p id="slogan">Soluções digitais para o seu negócio</p>
   </div>
 </header>
 
 <nav>
-  <a href="#inicio">Início</a>
-  <a href="#servicos">Serviços</a>
-  <a href="#portfolio">Portfólio</a>
-  <a href="#sobre">Sobre</a>
-  <a href="#contato">Contato</a>
+  <a href="#inicio" id="nav-inicio">Início</a>
+  <a href="#servicos" id="nav-servicos">Serviços</a>
+  <a href="#portfolio" id="nav-portfolio">Portfólio</a>
+  <a href="#sobre" id="nav-sobre">Sobre</a>
+  <a href="#contato" id="nav-contato">Contato</a>
 </nav>
 
 <main>
   <section id="inicio">
-    <h2>Bem-vindo à SURTEC</h2>
-    <p>Somos uma empresa especializada em soluções digitais, oferecendo serviços de criação de sites, desenvolvimento de aplicações móveis e consultoria tecnológica para ajudar o seu negócio a crescer.</p>
+    <h2 id="inicio-titulo">Bem-vindo à SURTEC</h2>
+    <p id="inicio-texto">Somos uma empresa especializada em soluções digitais, oferecendo serviços de criação de sites, desenvolvimento de aplicações móveis e consultoria tecnológica para ajudar o seu negócio a crescer.</p>
   </section>
 
   <section id="servicos">
-    <h2>Serviços</h2>
-    <ul>
+    <h2 id="servicos-titulo">Serviços</h2>
+    <ul id="servicos-lista">
       <li>Desenvolvimento de websites personalizados</li>
       <li>Criação de aplicações móveis para Android e iOS</li>
       <li>Marketing digital e gestão de redes sociais</li>
@@ -115,9 +132,9 @@
   </section>
 
   <section id="portfolio">
-    <h2>Portfólio</h2>
-    <p>Confira alguns dos nossos projetos recentes:</p>
-    <ul>
+    <h2 id="portfolio-titulo">Portfólio</h2>
+    <p id="portfolio-texto">Confira alguns dos nossos projetos recentes:</p>
+    <ul id="portfolio-lista">
       <li>Website institucional para Empresa XYZ</li>
       <li>App móvel para reserva de serviços - MoçApp</li>
       <li>Campanha digital para Lançamento de Produto</li>
@@ -125,23 +142,144 @@
   </section>
 
   <section id="sobre">
-    <h2>Sobre a SURTEC</h2>
-    <p>A SURTEC nasceu para oferecer soluções digitais inovadoras em Moçambique, focando em qualidade, eficiência e satisfação dos clientes. Nosso objetivo é transformar ideias em resultados concretos por meio da tecnologia.</p>
+    <h2 id="sobre-titulo">Sobre a SURTEC</h2>
+    <p id="sobre-texto">A SURTEC nasceu para oferecer soluções digitais inovadoras em Moçambique, focando em qualidade, eficiência e satisfação dos clientes. Nosso objetivo é transformar ideias em resultados concretos por meio da tecnologia.</p>
   </section>
 
   <section id="contato">
-    <h2>Contato</h2>
-    <p>Quer saber mais? Entre em contato conosco pelo WhatsApp:</p>
+    <h2 id="contato-titulo">Contato</h2>
+    <p id="contato-texto">Quer saber mais? Entre em contato conosco pelo WhatsApp:</p>
     <a href="https://wa.me/258876333038" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
       Chat no WhatsApp +258 876 333 038
     </a>
-    <p>Ou envie um email para: <a href="mailto:contato@surtec.co.mz">contato@surtec.co.mz</a></p>
+    <p id="email-info">Ou envie um email para: <a href="mailto:contato@surtec.co.mz">contato@surtec.co.mz</a></p>
   </section>
+
+  <section id="testemunhos">
+    <h2>Depoimentos</h2>
+    <blockquote>"A SURTEC transformou nossa presença digital! Excelente trabalho." — João M., XYZ Ltda.</blockquote>
+    <blockquote>"Equipe profissional, entregaram o site em tempo recorde." — Carla N., Startup MZ</blockquote>
+  </section>
+
+  <section id="galeria">
+    <h2>Galeria de Projetos</h2>
+    <p>Veja alguns dos nossos trabalhos:</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 15px;">
+      <img src="projeto1.jpg" alt="Projeto 1" style="width: 200px; border-radius: 8px;" />
+      <img src="projeto2.jpg" alt="Projeto 2" style="width: 200px; border-radius: 8px;" />
+      <img src="projeto3.jpg" alt="Projeto 3" style="width: 200px; border-radius: 8px;" />
+    </div>
+  </section>
+
+  <section id="equipe">
+    <h2>Nossa Equipe</h2>
+    <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+      <div style="text-align: center;">
+        <img src="fundador.jpg" alt="Fundador" style="width: 120px; border-radius: 50%;" />
+        <p><strong>Nikolsky Jamo</strong><br />Fundador & Desenvolvedor</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2>Perguntas Frequentes (FAQ)</h2>
+    <details>
+      <summary>Quanto tempo demora a criação de um site?</summary>
+      <p>Depende da complexidade, mas geralmente entre 5 a 10 dias úteis.</p>
+    </details>
+    <details>
+      <summary>Quais tecnologias vocês usam?</summary>
+      <p>Usamos HTML, CSS, JavaScript, WordPress, Flutter, entre outras.</p>
+    </details>
+    <details>
+      <summary>Como funciona o processo de desenvolvimento?</summary>
+      <p>Entramos em contato, definimos requisitos, criamos o layout e depois o site ou app.</p>
+    </details>
+  </section>
+
 </main>
 
 <footer>
   <p>© 2025 SURTEC - Todos os direitos reservados.</p>
 </footer>
+
+<script>
+  const translations = {
+    en: {
+      "slogan": "Digital solutions for your business",
+      "nav-inicio": "Home",
+      "nav-servicos": "Services",
+      "nav-portfolio": "Portfolio",
+      "nav-sobre": "About",
+      "nav-contato": "Contact",
+      "inicio-titulo": "Welcome to SURTEC",
+      "inicio-texto": "We specialize in digital solutions, offering website creation, mobile app development, and tech consulting to help your business grow.",
+      "servicos-titulo": "Services",
+      "servicos-lista": [
+        "Custom website development",
+        "Mobile app creation for Android and iOS",
+        "Digital marketing and social media management",
+        "IT consulting and support"
+      ],
+      "portfolio-titulo": "Portfolio",
+      "portfolio-texto": "Check out some of our recent projects:",
+      "portfolio-lista": [
+        "Institutional website for XYZ Company",
+        "Mobile service booking app - MoçApp",
+        "Digital campaign for product launch"
+      ],
+      "sobre-titulo": "About SURTEC",
+      "sobre-texto": "SURTEC was born to deliver innovative digital solutions in Mozambique, focusing on quality, efficiency, and customer satisfaction. Our goal is to turn ideas into concrete results through technology.",
+      "contato-titulo": "Contact",
+      "contato-texto": "Want to know more? Contact us via WhatsApp:",
+      "email-info": "Or send an email to: <a href='mailto:contato@surtec.co.mz'>contato@surtec.co.mz</a>"
+    }
+  };
+
+  let currentLang = "pt";
+
+  document.getElementById("language-toggle").addEventListener("click", () => {
+    if (currentLang === "pt") {
+      const t = translations.en;
+      for (let id in t) {
+        const el = document.getElementById(id);
+        if (el) {
+          if (Array.isArray(t[id])) {
+            el.innerHTML = t[id].map(item => `<li>${item}</li>`).join("");
+          } else {
+            el.innerHTML = t[id];
+          }
+        }
+      }
+      currentLang = "en";
+      document.getElementById("language-toggle").textContent = "PT";
+    } else {
+      location.reload();
+    }
+  });
+</script>
+
+
+<!-- Chat Flutuante do WhatsApp -->
+<script>
+  (function() {
+    var chatButton = document.createElement('a');
+    chatButton.href = "https://wa.me/258876333038";
+    chatButton.target = "_blank";
+    chatButton.style.position = "fixed";
+    chatButton.style.bottom = "20px";
+    chatButton.style.right = "20px";
+    chatButton.style.background = "#25D366";
+    chatButton.style.color = "white";
+    chatButton.style.padding = "10px 15px";
+    chatButton.style.borderRadius = "50px";
+    chatButton.style.textDecoration = "none";
+    chatButton.style.fontWeight = "bold";
+    chatButton.style.boxShadow = "0 0 10px rgba(0,0,0,0.3)";
+    chatButton.innerText = "💬 Fale Connosco";
+    document.body.appendChild(chatButton);
+  })();
+</script>
 
 </body>
 </html>
